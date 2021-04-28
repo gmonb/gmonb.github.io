@@ -1,2 +1,0 @@
-(this["webpackJsonpgmonb.github.io"]=this["webpackJsonpgmonb.github.io"]||[]).push([[0],{9:function(e,t,i){"use strict";i.r(t);var r=i(3),c=i.p+"static/media/maurigregory.0f63fe12.jpg",s=i(0);var n=function(){return Object(s.jsxs)("div",{children:[Object(s.jsx)("h1",{children:"Mauri & Gregory Lifestyle Blog"}),Object(s.jsx)("img",{src:c})]})};Object(r.render)(Object(s.jsx)(n,{}),document.getElementById("root"))}},[[9,1,2]]]);
-//# sourceMappingURL=main.4c44726b.chunk.js.map
