@@ -1,10 +1,14 @@
 import image from "../../assets/maurigregory.jpg";
+import * as Style from "./style";
+import Header from "./header";
 
 function Home() {
   return (
     <div>
-      <h1>Mauri & Gregory Lifestyle Blog</h1>
-      <img src={image} />
+      <Header />
+      <Style.MainImageContainer>
+        <Style.MainImage src={image} alt="mauri-and-gregory" />
+      </Style.MainImageContainer>
     </div>
   );
 }

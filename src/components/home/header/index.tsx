@@ -7,7 +7,7 @@ function Header() {
     <Style.Header>
       <Style.Links>
         {LINKS.map((link) => (
-          <div>{link}</div>
+          <Style.Link key={link}>{link}</Style.Link>
         ))}
       </Style.Links>
     </Style.Header>

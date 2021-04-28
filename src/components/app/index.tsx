@@ -1,13 +1,7 @@
-import image from "../../assets/maurigregory.jpg";
-import Header from "../home/header";
+import Home from "../home";
 
 function App() {
-  return (
-    <div>
-      <Header />
-      <img src={image} />
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
