@@ -3,7 +3,7 @@ import image from "../../assets/maurigregory.jpg";
 function App() {
   return (
     <div>
-      <div>Hello little girl, good luck this afternoon !!!</div>
+      <h1>Mauri & Gregory Lifestyle Blog</h1>
       <img src={image} />
     </div>
   );
