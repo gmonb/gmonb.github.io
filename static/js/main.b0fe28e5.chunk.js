@@ -1,0 +1,2 @@
+(this["webpackJsonpgmonb.github.io"]=this["webpackJsonpgmonb.github.io"]||[]).push([[0],{9:function(t,e,n){"use strict";n.r(e);var i=n(3),o=n(0);var c=function(){return Object(o.jsx)("div",{children:"testing"})};Object(i.render)(Object(o.jsx)(c,{}),document.getElementById("root"))}},[[9,1,2]]]);
+//# sourceMappingURL=main.b0fe28e5.chunk.js.map
