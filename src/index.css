@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Pratiwi";
-  src: url(./fonts/Pratiwi\ Vintage\ Typeface.ttf) format("ttf");
+  src: url("./fonts/Pratiwi\ Sans\ Typeface.ttf") format("truetype");
 }
 
 *,
@@ -8,4 +8,5 @@
 *:after {
   box-sizing: border-box;
   font-family: "Pratiwi";
+  font-size: 18px;
 }

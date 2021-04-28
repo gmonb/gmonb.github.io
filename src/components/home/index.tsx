@@ -1,14 +1,12 @@
-import image from "../../assets/maurigregory.jpg";
-import * as Style from "./style";
+
 import Header from "./header";
+import MainImage from "./main-image";
 
 function Home() {
   return (
     <div>
       <Header />
-      <Style.MainImageContainer>
-        <Style.MainImage src={image} alt="mauri-and-gregory" />
-      </Style.MainImageContainer>
+      <MainImage />
     </div>
   );
 }

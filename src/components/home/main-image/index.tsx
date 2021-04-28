@@ -1,4 +1,4 @@
-import image from "../../assets/maurigregory.jpg";
+import image from "../../../assets/maurigregory.jpg";
 import * as Style from "./style";
 
 function MainImage() {

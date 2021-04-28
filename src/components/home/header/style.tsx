@@ -13,7 +13,6 @@ export const Links = styled.div`
 `;
 
 export const Link = styled.div`
-  font-size: 18px;
   margin: 0 10px;
 
   :hover {
