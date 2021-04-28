@@ -1,0 +1,2 @@
+(this["webpackJsonpgmonb.github.io"]=this["webpackJsonpgmonb.github.io"]||[]).push([[0],{9:function(t,e,i){"use strict";i.r(e);var o=i(3),r=i.p+"static/media/maurigregory.0f63fe12.jpg",c=i(0);var n=function(){return Object(c.jsxs)("div",{children:[Object(c.jsx)("div",{children:"Hello little girl, good luck this afternoon !!!"}),Object(c.jsx)("img",{src:r})]})};Object(o.render)(Object(c.jsx)(n,{}),document.getElementById("root"))}},[[9,1,2]]]);
+//# sourceMappingURL=main.0b7560fd.chunk.js.map
