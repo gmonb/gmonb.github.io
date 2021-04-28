@@ -1,9 +1,10 @@
 import image from "../../assets/maurigregory.jpg";
+import Header from "../home/header";
 
 function App() {
   return (
     <div>
-      <h1>Mauri & Gregory Lifestyle Blog</h1>
+      <Header />
       <img src={image} />
     </div>
   );

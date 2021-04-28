@@ -7,4 +7,5 @@ export const Header = styled.header`
 export const Links = styled.div`
   display: flex;
   flex-direction: row;
+  flex: 1;
 `;

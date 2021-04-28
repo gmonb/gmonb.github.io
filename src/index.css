@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Pratiwi";
+  src: url(./fonts/Pratiwi\ Vintage\ Typeface.ttf) format("ttf");
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: "Pratiwi";
+}
