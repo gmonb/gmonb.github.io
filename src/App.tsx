@@ -1,10 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import puppeteer from "puppeteer-core";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import React from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    //load();
+  }, []);
+
+  async function load() {
+    // Launch the browser
+    const browser = await puppeteer.launch({ headless: "new" });
+
+    // // Create a page
+    // const page = await browser.newPage();
+
+    // // Go to your site
+    // await page.goto("https://www.delhaize.be/nl/shop/Wijn-en-bubbels/c/v2WIN");
+
+    // // Query for an element handle.
+    // const element = await page.$eval(
+    //   '[data-testid="total-products-info"]',
+    //   (element) => {
+    //     setCount(element.innerHTML as any);
+    //   }
+    // );
+
+    // // Close browser.
+    // await browser.close();
+  }
+
+  async function getWineRating() {}
 
   return (
     <>
@@ -29,7 +58,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
