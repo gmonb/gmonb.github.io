@@ -1,4 +1,4 @@
-import puppeteer from "puppeteer-core";
+import {launch} from "puppeteer";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -13,7 +13,7 @@ function App() {
 
   async function load() {
     // Launch the browser
-    const browser = await puppeteer.launch({ headless: "new" });
+    const browser = await launch({ headless: "new" });
 
     // // Create a page
     // const page = await browser.newPage();
