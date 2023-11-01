@@ -1,5 +1,6 @@
 import { API_URL } from "../constants/env";
 import * as React from "react";
+import { StateEnum } from "../types";
 
 export interface HomeStateProps {}
 
@@ -16,18 +17,28 @@ interface Item {
 export function Home({}: HomeProps) {
   const [numberOfWines, setNumberOfWines] = React.useState("");
   const [items, setItems] = React.useState<Item[]>([]);
+  const [stateOfLoad, setStateOfLoad] = React.useState(StateEnum.Initial);
+
+  const loading = stateOfLoad === StateEnum.Pending;
 
   React.useEffect(() => {
     load();
   }, []);
 
   async function load() {
-    const response = await fetch(`${API_URL}/wines`);
-    if (response.status === 404) return;
+    setStateOfLoad(StateEnum.Pending);
 
-    const json = await response.json();
-    setNumberOfWines(json.numberOfWines);
-    setItems(json.items);
+    try {
+      const response = await fetch(`${API_URL}/wines`);
+
+      const json = await response.json();
+      setNumberOfWines(json.numberOfWines);
+      setItems(json.items);
+
+      setStateOfLoad(StateEnum.Completed);
+    } catch (error) {
+      setStateOfLoad(StateEnum.Error);
+    }
   }
 
   function renderItem(item: Item) {
@@ -67,9 +78,17 @@ export function Home({}: HomeProps) {
   );
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <span>{numberOfWines}</span>
-      {list}
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
+      {loading ? (
+        "Loading..."
+      ) : (
+        <>
+          <span>{numberOfWines}</span>
+          {list}
+        </>
+      )}
     </div>
   );
 }
