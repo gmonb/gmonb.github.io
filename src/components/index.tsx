@@ -50,9 +50,7 @@ export function Home({}: HomeProps) {
           flexDirection: "column",
           marginBottom: 10,
           padding: 10,
-          borderColor: "lightblue",
-          borderWidth: 3,
-          borderRadius: 4,
+          border: "3px solid lightblue",
         }}
       >
         <span>Name: {item.name}</span>
