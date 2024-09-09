@@ -1,12 +1,8 @@
-import { API_URL } from "../constants/env";
+import { API_URL } from "../../constants/env";
 import * as React from "react";
-import { StateEnum } from "../types";
+import { StateEnum } from "../../types";
 
-export interface HomeStateProps {}
-
-export interface HomeDispatchProps {}
-
-export type HomeProps = HomeStateProps & HomeDispatchProps;
+export interface HomeProps {}
 
 interface Item {
   name: string;
@@ -14,7 +10,7 @@ interface Item {
   href: string;
 }
 
-export function Home({}: HomeProps) {
+export function Wines({}: HomeProps) {
   const [numberOfWines, setNumberOfWines] = React.useState("");
   const [items, setItems] = React.useState<Item[]>([]);
   const [stateOfLoad, setStateOfLoad] = React.useState(StateEnum.Initial);

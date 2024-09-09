@@ -1,7 +1,8 @@
-import { Home } from "./components";
+import { Shifts } from "./components/shifts";
+import { Wines } from "./components/wines";
 
 function App() {
-  return <Home />;
+  return <Shifts />;
 }
 
 export default App;
