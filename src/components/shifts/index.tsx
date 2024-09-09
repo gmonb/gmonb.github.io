@@ -27,6 +27,7 @@ export function Shifts({}: ShiftsProps) {
     >
       <div style={{ maxHeight: 50 }}>
         <DatePicker
+          calendarStartDay={1}
           minDate={START_OF_SHIFTS}
           selected={selectedDate}
           dateFormat="dd-MM-yyyy"
@@ -42,7 +43,7 @@ export function Shifts({}: ShiftsProps) {
           gap: 16,
         }}
       >
-        {isFree ? "I'm a free man!" : `Damn, I have to work: {shift}`}
+        {isFree ? "I'm a free man!" : `Damn, I have to work: ${shift}`}
         <img src={isFree ? freeImage : workImage} width={500} />
       </div>
     </div>
