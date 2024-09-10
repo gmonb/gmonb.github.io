@@ -10,7 +10,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d dist",
+    "deploy": "gh-pages -b static -d dist",
     "tsc:check": "tsc --noEmit",
     "tsc:watch": "tsc --watch --noEmit"
   },
