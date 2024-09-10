@@ -3,14 +3,16 @@ import { getShiftForDay, getShiftIndex, getTwoWeekShiftsInfo } from "./helpers";
 import { Shift } from "./types";
 import * as React from "react";
 import DatePicker from "react-datepicker";
-import { TWO_WEEKS_DAYS } from "./constants";
+import { CURRENT_START_OF_SHIFTS, TWO_WEEKS_DAYS } from "./constants";
 import workImage from "../../assets/workman.jpg";
 import freeImage from "../../assets/freeman.jpg";
 
 export interface ShiftsProps {}
 
 export function Shifts({}: ShiftsProps) {
-  const [selectedDate, setSelectedDate] = React.useState(new Date());
+  const [selectedDate, setSelectedDate] = React.useState(
+    CURRENT_START_OF_SHIFTS
+  );
 
   const shiftIndex = getShiftIndex(selectedDate);
   const shift = getShiftForDay(shiftIndex);
@@ -36,7 +38,7 @@ export function Shifts({}: ShiftsProps) {
       <div style={{ maxHeight: 50 }}>
         <DatePicker
           calendarStartDay={1}
-          minDate={new Date()}
+          minDate={CURRENT_START_OF_SHIFTS}
           selected={selectedDate}
           dateFormat="dd-MM-yyyy"
           onChange={(date) => (date ? setSelectedDate(date) : undefined)}
