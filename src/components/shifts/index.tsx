@@ -30,12 +30,20 @@ export function Shifts({}: ShiftsProps) {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        width: "100%",
         flex: 1,
         gap: 16,
         padding: 50,
       }}
     >
-      <div style={{ maxHeight: 50 }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          maxHeight: 50,
+          width: "100%",
+        }}
+      >
         <DatePicker
           calendarStartDay={1}
           minDate={CURRENT_START_OF_SHIFTS}
@@ -49,6 +57,7 @@ export function Shifts({}: ShiftsProps) {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          width: "100%",
           gap: 16,
         }}
       >
@@ -59,49 +68,58 @@ export function Shifts({}: ShiftsProps) {
             justifyContent: "center",
             alignItems: "center",
             maxWidth: "80%",
-            maxHeight: 300,
+            maxHeight: 200,
           }}
         >
           <img src={isFree ? freeImage : workImage} height="100%" />
         </div>
       </div>
-      <table>
-        <thead>
-          <tr>
-            {TWO_WEEKS_DAYS.map((day, index) => (
-              <th
-                key={index}
-                style={{
-                  border: `2px solid ${index < 7 ? "#4682B4" : "#DAA520"}`,
-                  backgroundColor: getBackgroundColor(index),
-                  padding: 5,
-                  textAlign: "center",
-                  minWidth: 14,
-                }}
-              >
-                {day}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            {TWO_WEEKS_DAYS.map((_, index) => (
-              <td
-                key={index}
-                style={{
-                  border: `2px solid ${index < 7 ? "#4682B4" : "#DAA520"}`,
-                  backgroundColor: getBackgroundColor(index),
-                  padding: 5,
-                  textAlign: "center",
-                }}
-              >
-                {twoWeeksShiftsInfo.shifts[index][0]}
-              </td>
-            ))}
-          </tr>
-        </tbody>
-      </table>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          width: "100%",
+        }}
+      >
+        <table>
+          <thead>
+            <tr>
+              {TWO_WEEKS_DAYS.map((day, index) => (
+                <th
+                  key={index}
+                  style={{
+                    border: `2px solid ${index < 7 ? "#4682B4" : "#DAA520"}`,
+                    backgroundColor: getBackgroundColor(index),
+                    padding: 2,
+                    textAlign: "center",
+                    minWidth: 22,
+                  }}
+                >
+                  {day}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {TWO_WEEKS_DAYS.map((_, index) => (
+                <td
+                  key={index}
+                  style={{
+                    border: `2px solid ${index < 7 ? "#4682B4" : "#DAA520"}`,
+                    backgroundColor: getBackgroundColor(index),
+                    padding: 2,
+                    textAlign: "center",
+                  }}
+                >
+                  {twoWeeksShiftsInfo.shifts[index][0]}
+                </td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
