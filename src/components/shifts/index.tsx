@@ -10,9 +10,7 @@ import freeImage from "../../assets/freeman.jpg";
 export interface ShiftsProps {}
 
 export function Shifts({}: ShiftsProps) {
-  const [selectedDate, setSelectedDate] = React.useState(
-    CURRENT_START_OF_SHIFTS
-  );
+  const [selectedDate, setSelectedDate] = React.useState(new Date());
 
   const shiftIndex = getShiftIndex(selectedDate);
   const shift = getShiftForDay(shiftIndex);
