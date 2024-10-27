@@ -17,10 +17,6 @@ export function Wines({}: HomeProps) {
 
   const loading = stateOfLoad === StateEnum.Pending;
 
-  React.useEffect(() => {
-    load();
-  }, []);
-
   async function load() {
     setStateOfLoad(StateEnum.Pending);
 
@@ -73,12 +69,19 @@ export function Wines({}: HomeProps) {
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        flex: 1,
+        padding: 16,
+      }}
     >
-      {loading ? (
+      {loading && false ? (
         "Loading..."
       ) : (
         <>
+          <button onClick={load}>{loading ? "Fetching" : "Fetch"}</button>
           <span>{numberOfWines}</span>
           {list}
         </>
